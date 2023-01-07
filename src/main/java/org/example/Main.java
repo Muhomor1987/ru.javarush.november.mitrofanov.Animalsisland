@@ -2,20 +2,13 @@ package org.example;
 
 import Settins.Constants;
 import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.dataformat.xml.XmlFactory;
 import islandStructure.Island;
-import organism.entities.Animal;
-import organism.entities.units.Wolf;
 import util.CreateLocation;
 import util.CreatorIsland;
 
-import java.io.File;
-import java.io.IOException;
-
-public class Main {//
+public class Main {
     public static void main(String[] args) {
 
         //Constant загружаем из файла

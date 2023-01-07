@@ -7,43 +7,25 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class Constants {
 
-        @JsonProperty
         private String nameIsland = "Terra";
-        @JsonProperty
         private final int X_MAX = 100;
-        @JsonProperty
         private final int Y_MAX = 20;
-        @JsonProperty
 
 
         private final int MAX_WOLF_ON_LOCATION = 30;
-        @JsonProperty
         private final int MAX_BOA_ON_LOCATION = 30;
-        @JsonProperty
         private final int MAX_FOX_ON_LOCATION = 30;
-        @JsonProperty
         private final int MAX_BEAR_ON_LOCATION = 5;
-        @JsonProperty
         private final int MAX_EAGLE_ON_LOCATION = 20;
-        @JsonProperty
         private final int MAX_HORSE_ON_LOCATION = 20;
-        @JsonProperty
         private final int MAX_DEER_ON_LOCATION = 20;
-        @JsonProperty
         private final int MAX_RABBIT_ON_LOCATION = 150;
-        @JsonProperty
         private final int MAX_MOUSE_ON_LOCATION = 500;
-        @JsonProperty
         private final int MAX_GOAT_ON_LOCATION = 140;
-        @JsonProperty
         private final int MAX_BOAR_ON_LOCATION = 50;
-        @JsonProperty
         private final int MAX_BUFFALO_ON_LOCATION = 10;
-        @JsonProperty
         private final int MAX_DUCK_ON_LOCATION = 10;
-        @JsonProperty
         private final int MAX_CATERPILLAR_ON_LOCATION = 20;
-        @JsonProperty
         private final int MAX_PLANT_ON_LOCATION = 200;
 
 

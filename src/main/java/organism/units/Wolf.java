@@ -1,4 +1,4 @@
-package organism.entities.units;
+package organism.units;
 
 import organism.Predator;
 import organism.entities.Animal;
