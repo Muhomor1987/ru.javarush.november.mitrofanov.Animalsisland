@@ -1,10 +1,11 @@
 package organism.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import organism.Organism;
 
 import java.util.HashMap;
 
-public abstract class Animal {
+public abstract class Animal implements Organism {
     public String name = this.getClass().getSimpleName() + " ";
 
     public double weight;

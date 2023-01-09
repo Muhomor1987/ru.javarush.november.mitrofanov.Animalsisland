@@ -29,8 +29,7 @@ public class CreateLocation implements Runnable {
 
         for (int i = 0; i < island.getXMax(); i++) {
             for (int j = 0; j < island.getYMax(); j++) {
-                Location next = locationIterator.next();
-                island.getLocations()[i][j] = next;
+                island.getLocations()[i][j] = locationIterator.next();
             }
         }
     }

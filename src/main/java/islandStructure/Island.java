@@ -1,7 +1,9 @@
 package islandStructure;
 
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Island {
@@ -17,8 +19,39 @@ public class Island {
     private HashSet<Location> locationHashSet;
 
     private AtomicInteger totalLocation;
-    int totalLocations;
-    Location[][] locations;
+
+    private int totalLocations;
+
+    private Location[][] locations  ;
+
+
+    //Конструктор
+
+    public Island( String name, int xMax, int yMax) {
+        this.name = name;
+        this.xMax = xMax;
+        this.yMax = yMax;
+        locations = new Location[xMax][yMax];
+        this.locationHashSet = new HashSet<>();
+        totalLocations = xMax*yMax;
+        this.totalLocation=new AtomicInteger(totalLocations);
+    }
+
+//Переопределяем toString
+
+    @Override
+    public String toString() {
+
+        return "Island{" +
+                "name='" + name + '\'' +
+                ", xMax=" + xMax +
+                ", yMax=" + yMax +
+                ", locationHashSet=" + locationHashSet.size() +
+                ", totalLocation=" + totalLocation +
+                ", totalLocations=" + totalLocations +
+                ", locations=" + Arrays.toString(locations) +
+                '}';
+    }
 
     public Location[][] getLocations() {
         return locations;
@@ -27,20 +60,6 @@ public class Island {
     public void setLocations(Location[][] locations) {
         this.locations = locations;
     }
-
-    //Конструктор
-    public Island( String name, int xMax, int yMax) {
-        this.name = name;
-        this.xMax = xMax;
-        this.yMax = yMax;
-        this.locationHashSet = new HashSet<>();
-        this.totalLocation=new AtomicInteger(xMax*yMax);
-        totalLocations = xMax*yMax;
-        locations = new Location[xMax][yMax];
-    }
-
-//Переопределяем toString
-
 
     public AtomicInteger getTotalLocation() {
         return totalLocation;

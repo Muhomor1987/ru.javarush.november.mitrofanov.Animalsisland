@@ -8,8 +8,11 @@ import islandStructure.Island;
 import util.CreateLocation;
 import util.CreatorIsland;
 
+import java.util.Arrays;
+import java.util.concurrent.*;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //Constant загружаем из файла
         ObjectMapper objectMapper = new ObjectMapper(new JsonFactory());
@@ -34,9 +37,18 @@ public class Main {
         CreatorIsland creatorIsland = new CreatorIsland(constants);
         Island island = creatorIsland.createIsland();
         CreateLocation createLocation = new CreateLocation(island,constants);
-        createLocation.run();
+        Thread thread = new Thread(createLocation);
+        ExecutorService executorService = Executors.newWorkStealingPool();
+        for (int i = 0; i < 4; i++) {
+            executorService.execute(thread);
+        }
+
         createLocation.arrangeLocation();
+        //Test
+        System.out.println(island);
         System.out.println(island.getLocationHashSet().size());
+        System.out.println(island.getLocations()[99][19]);
+
 
 
 
